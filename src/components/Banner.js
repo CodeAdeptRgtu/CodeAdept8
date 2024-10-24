@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
@@ -11,7 +13,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [  "Welcome to Coding Club" ];
   const period = 2000;
 
   useEffect(() => {
@@ -50,15 +52,21 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Judy`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               
+                <h1>{`Deparment Of Information Technology`} </h1>
+                {/* <h2>{`Welcome to Coding Club`}</h2> */}
+                 <h2 className="txt-rotate" dataPeriod="1000" data-rotate='[ "Welcome to Coding Club" ]'><span className="wrap">{text}</span></h2>
+
+
+                  <p>We focus on strengthening programmers' core knowledge and problem-solving abilities. Our goal is to offer students a variety of experiences, helping them discover their outstanding technical skills and aptitude for solving complex problems.</p>
+                  <a href="https://www.linkedin.com/showcase/codeadept" target="_blank" alt='/'>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  </a>
               </div>}
             </TrackVisibility>
           </Col>
@@ -75,3 +83,4 @@ export const Banner = () => {
     </section>
   )
 }
+

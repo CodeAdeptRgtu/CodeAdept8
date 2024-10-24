@@ -1,13 +1,46 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+
+import img from "../assets/img/arpit.jpg"
+import img2 from "../assets/img/sachin.jpg"
+import img3 from "../assets/img/hod.jpg"
+// import img4 from "../assets/img/arpit.jpg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
+// import React from 'react';
+// import React, { useState, useEffect } from 'react';
+// import { Carousel, Container, Row, Col } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
+  
+  // const [index, setIndex] = useState(0);
+
+  // // Array of images to slide
+  // const images = [
+  //   img,img2,img3,img4
+  // ];
+
+  // // Function to handle the sliding effect
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIndex(prevIndex => (prevIndex + 1) % images.length);
+  //   }, 3000); // Change slide every 3 seconds
+
+  //   return () => clearInterval(interval); // Clean up on unmount
+  // }, [images.length]);
+
+  // // Function to calculate the three images to show
+  // const getDisplayedImages = () => {
+  //   const displayedImages = [];
+  //   for (let i = 0; i < 3; i++) {
+  //     displayedImages.push(images[(index + i) % images.length]);
+  //   }
+  //   return displayedImages;
+  // };
+
+
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -34,26 +67,43 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <h2>Faculty Coordinators</h2>
+                        <p>Meet the supportive faculty of DoIT Coding Club<br></br> </p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <img src={img3} alt="Image" />
+                                <h5>Dr. ASMITA A MOGHE</h5>
+                                <p>Head of Department</p>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <img src={img} alt="Image" />
+                                <h5>Prof. ARPIT NAMDEV </h5>
+                                <p>Head of Coding Club</p>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <img src={img2} alt="Image" />
+                                <h5>Dr. SACHIN GOYAL</h5>
+                               <p>Head of Coding Club</p>
                             </div>
                         </Carousel>
+
+{/* <Container fluid>
+      <Carousel controls={false} indicators={false} interval={null} pause={false}>
+        <Carousel.Item>
+          <Row>
+            {getDisplayedImages().map((image, idx) => (
+              <Col key={idx}>
+                <img
+                  className="d-block w-100"
+                  src={image}
+                  alt={`Slide ${idx}`}
+                />
+              </Col>
+            ))}
+          </Row>
+        </Carousel.Item>
+      </Carousel>
+    </Container> */}
                     </div>
                 </div>
             </div>

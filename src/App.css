@@ -81,7 +81,9 @@ p.success {
 p.danger {
 	color: red;
 }
+
 /************ Navbar Css ************/
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -95,7 +97,7 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+    width: 11.5%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -257,6 +259,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: block;
 }
+
 .banner p {
   color: #B8B8B8;
   font-size: 18px;
@@ -272,12 +275,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+  
 }
+
+.banner a{
+    text-decoration: none;
+}
+
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
+  text-decoration: none;
 }
 .banner button:hover svg {
   margin-left: 25px;
@@ -298,6 +308,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+
+@media (max-width: 1024px) {
+  .banner h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 40px;
+  }
 }
 
 /************ Skills Css ************/
@@ -465,6 +491,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+
+
+
 
 /************ Projects Css ************/
 .contact {
